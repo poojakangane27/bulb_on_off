@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(222, 179, 179);
+        }
+
+        span {
+            font-size: 40px;
+            color: black;
+            align-items: center;
+            font-style: bold;
+            margin-top: 20px;
+        }
+        button{
+            width: 400px;
+            height: 40px;
+            background-color: rgb(94, 60, 60);
+            color: white;
+            font-size: 30px;
+            font-style: bold;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        img {
+            height: 500px;
+            width: 700px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <span>Light On Off</span>
+    <div class="container">
+        <img src="./images/bulb-off.png" alt="off" id="bulb">
+        <br> <br>
+        <button type="button" onclick="bulbToggler()">ON/OFF</button>
+    </div>
+    <script>
+        const bulbElement = document.getElementById("bulb");
+        let state = false;
+        function bulbToggler() {
+            if (state == false) {
+                bulbElement.src = "./images/bulb-on.png";
+                state = true;
+            }
+            else {
+                bulbElement.src = "./images/bulb-off.png";
+                state = false;
+            }
+        }
+    </script>
+</body>
+
+</html>
